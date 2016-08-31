@@ -8,16 +8,16 @@
 
 Questionaire.destroy_all 
 
-10.times do
-  q = Questionaire.new
-  q.title = Faker::Lorem.word
-  q.description  = Faker::Lorem.sentence
-  q.save 
-end
+# 10.times do
+#   q = Questionaire.new
+#   q.title = Faker::Lorem.word
+#   q.description  = Faker::Lorem.sentence
+#   q.save 
+# end
 
-20.times do
-  question=Question.new
-  question.title= Faker::Lorem.word
-  question.questionaire_id= Questionaire.all.sample.id
-  question.save
-end
+# 20.times do
+#   question=Question.new
+#   question.title= Faker::Lorem.word
+#   question.questionaire_id= Questionaire.all.sample.id
+#   question.save
+# end

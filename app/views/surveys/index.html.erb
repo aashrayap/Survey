@@ -15,7 +15,8 @@
       <br>
       <%= survey.description %>
       <br>
-      <%= link_to "Take this survey", edit_survey_path(survey)%>
+      <%= link_to "Take this survey", edit_survey_path(survey)%>  |
+      <%= link_to "View this survey", survey_path(survey)%>
       <br>
       <br>
     <%end%>

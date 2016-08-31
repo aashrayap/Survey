@@ -9,17 +9,20 @@
 </div>
 
 <div class='container'>
- <div class='col-md-4 col-md-offset-4'>
- <%= form_for @survey, url: surveys_builders_path do |questionaire_field| %>
-   <br>
-   <%i=0%>
-   <%= questionaire_field.fields_for :questions do |question_field| %>
-   		<%=@survey.questions[i].title %>
-   		<%i=i+1%>
-       <%= question_field.label :answer%>
-       <%=question_field.text_field :answer %>
-   <%end%>
- <%= questionaire_field.submit %>
- <%end%>
- </div>
+  <div class='col-md-4 col-md-offset-4'>
+    <%= form_for @survey, url: survey_path do |questionaire_field| %>
+      <br>
+      <%i=0%>
+      <%= questionaire_field.fields_for :questions do |question_field| %>
+        <br>
+        <h4>Question <%=i+1%>:<%=@survey.questions[i].title %></h4>
+        <%i=i+1%>
+        <%=question_field.text_area :answer %>
+        <br>
+      <%end%>
+      <%= questionaire_field.submit %>
+      <br>
+      <br>
+    <%end%>
+  </div>
 </div>

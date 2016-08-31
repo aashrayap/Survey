@@ -3,7 +3,8 @@ class SurveysController < ApplicationController
     @surveys=Questionaire.all
   end
 
-  def show
+  def edit
     @survey=Questionaire.find(params[:id])
+    @questions=@survey.questions
   end
 end

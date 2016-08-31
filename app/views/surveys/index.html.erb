@@ -3,7 +3,7 @@
     <h1 align='center'> Aash's Survey Site </h1>
     <br>
     <p align='center'> Click on a survey to take it or create one on your own </p>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Create Survey</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block"><%=link_to "Create Survey",new_surveys_builder_path%></button>
   </div>
 </div>
 
@@ -15,7 +15,7 @@
       <br>
       <%= survey.description %>
       <br>
-      <%= link_to "Take this survey", survey_path(survey)%>
+      <%= link_to "Take this survey", edit_survey_path(survey)%>
       <br>
       <br>
     <%end%>
